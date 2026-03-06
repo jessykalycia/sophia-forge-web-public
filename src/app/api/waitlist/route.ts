@@ -15,7 +15,6 @@ export async function POST(request: Request) {
     }
 
     await Promise.all([
-      // @ts-expect-error audienceId not required by current API
       resend.contacts.create({
         email,
         unsubscribed: false,
