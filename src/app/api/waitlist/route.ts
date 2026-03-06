@@ -15,6 +15,11 @@ export async function POST(request: Request) {
     }
 
     await Promise.all([
+      // @ts-expect-error audienceId not required by current API
+      resend.contacts.create({
+        email,
+        unsubscribed: false,
+      }),
       resend.emails.send({
         from: "Sophia Forge <noreply@sophiafoundry.com>",
         to: email,
