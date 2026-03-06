@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "title": "Sophia Forge",
+    "description": "A plataforma de operações feita para o seu estúdio."
+  },
+  "nav": {
+    "language": "Idioma",
+    "backToFoundry": "Voltar para Sophia Foundry"
+  },
+  "hero": {
+    "eyebrow": "Uma Plataforma de Estúdio",
+    "headline": "Forje seu pipeline.",
+    "subline": "A plataforma de operações feita para o seu estúdio.",
+    "cta": "Entre na Lista de Acesso Antecipado",
+    "scroll": "Rolar"
+  },
+  "what": {
+    "body": "Sophia Forge é a camada de operações que falta no seu estúdio. Gerenciamento de assets, acompanhamento de tarefas, colaboração em tempo real e fluxos de trabalho com IA — tudo conectado, tudo coerente, tudo em um só lugar."
+  },
+  "features": {
+    "asset_sync": "Sincronização de Assets",
+    "asset_sync_desc": "String Tables, Data Tables e Actor Assemblies do UE5 — ao vivo.",
+    "task_tracking": "Acompanhamento de Tarefas",
+    "task_tracking_desc": "Pipelines de produção feitos para como equipes de jogos realmente trabalham.",
+    "collaboration": "Colaboração em Tempo Real",
+    "collaboration_desc": "Todo o seu estúdio, em sincronia, sem o caos.",
+    "ai_workflows": "Fluxos de Trabalho com IA",
+    "ai_workflows_desc": "Orquestração inteligente que cuida da burocracia por você.",
+    "ue5": "Unreal Engine 5",
+    "ue5_desc": "Integração nativa completa. Nosso primeiro e mais profundo suporte a engine.",
+    "more_engines": "Mais Engines",
+    "more_engines_desc": "Outras engines e pipelines customizados estão no roadmap."
+  },
+  "quote": {
+    "eyebrow": "O Padrão",
+    "text": "Cada funcionalidade do Sophia Forge existe porque eu precisei dela. Construído em produção. Testado em produção. Entregue para você.",
+    "author": "Jessyka Gavião",
+    "role": "Fundadora, Sophia Foundry"
+  },
+  "waitlist": {
+    "eyebrow": "Acesso Antecipado",
+    "headline": "Seja o primeiro.",
+    "subline": "O Sophia Forge será lançado em breve. Entre na lista de espera para acesso antecipado, atualizações de preços e novidades de lançamento.",
+    "placeholder": "seu@email.com",
+    "cta": "Entrar na Lista",
+    "disclaimer": "Sem spam. Cancele quando quiser.",
+    "success": "Você está na lista.",
+    "error": "Algo deu errado. Tente novamente."
+  },
+  "footer": {
+    "tagline": "Um produto Sophia Foundry",
+    "email": "jessyka@sophiafoundry.com",
+    "copyright": "© 2026 Sophia Foundry. Todos os direitos reservados."
+  }
+}

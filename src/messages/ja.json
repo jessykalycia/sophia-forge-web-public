@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "title": "Sophia Forge",
+    "description": "あなたのスタジオのために構築された運営プラットフォーム。"
+  },
+  "nav": {
+    "language": "言語",
+    "backToFoundry": "Sophia Foundry に戻る"
+  },
+  "hero": {
+    "eyebrow": "スタジオプラットフォーム",
+    "headline": "パイプラインを鍛え上げよう。",
+    "subline": "あなたのスタジオのために構築された運営プラットフォーム。",
+    "cta": "早期アクセスのウェイトリストに参加",
+    "scroll": "スクロール"
+  },
+  "what": {
+    "body": "Sophia Forge は、あなたのスタジオに欠けていた運営レイヤーです。アセット管理、タスク追跡、リアルタイムコラボレーション、AI 駆動のワークフロー——すべてが連携し、すべてが一貫し、すべてが一つの場所に。"
+  },
+  "features": {
+    "asset_sync": "アセット同期",
+    "asset_sync_desc": "UE5 の String Tables、Data Tables、Actor Assemblies——リアルタイムで。",
+    "task_tracking": "タスク追跡",
+    "task_tracking_desc": "ゲームチームの実際の働き方に合わせた制作パイプライン。",
+    "collaboration": "リアルタイムコラボレーション",
+    "collaboration_desc": "スタジオ全体が同期。混乱はもうありません。",
+    "ai_workflows": "AI ワークフロー",
+    "ai_workflows_desc": "煩雑な作業を代わりに処理するインテリジェントなオーケストレーション。",
+    "ue5": "Unreal Engine 5",
+    "ue5_desc": "完全なネイティブ統合。最初にして最も深いエンジンサポート。",
+    "more_engines": "その他のエンジン",
+    "more_engines_desc": "他のエンジンやカスタムパイプラインへの対応を予定しています。"
+  },
+  "quote": {
+    "eyebrow": "スタンダード",
+    "text": "Sophia Forge のすべての機能は、私自身が必要としたから生まれました。本番環境で構築し、本番環境でテストし、あなたのもとへ届けます。",
+    "author": "Jessyka Gavião",
+    "role": "創設者、Sophia Foundry"
+  },
+  "waitlist": {
+    "eyebrow": "早期アクセス",
+    "headline": "いち早く体験を。",
+    "subline": "Sophia Forge は間もなくローンチします。ウェイトリストに参加して、早期アクセス、価格情報、ローンチニュースをいち早く受け取りましょう。",
+    "placeholder": "you@email.com",
+    "cta": "ウェイトリストに参加",
+    "disclaimer": "スパムは送りません。いつでも解除できます。",
+    "success": "リストに登録されました。",
+    "error": "エラーが発生しました。もう一度お試しください。"
+  },
+  "footer": {
+    "tagline": "Sophia Foundry のプロダクト",
+    "email": "jessyka@sophiafoundry.com",
+    "copyright": "© 2026 Sophia Foundry. All rights reserved."
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "title": "Sophia Forge",
+    "description": "Die Studio-Betriebsplattform für dein Studio."
+  },
+  "nav": {
+    "language": "Sprache",
+    "backToFoundry": "Zurück zu Sophia Foundry"
+  },
+  "hero": {
+    "eyebrow": "Eine Studio-Plattform",
+    "headline": "Schmiede deine Pipeline.",
+    "subline": "Die Studio-Betriebsplattform für dein Studio.",
+    "cta": "Für den Early-Access-Warteliste anmelden",
+    "scroll": "Scrollen"
+  },
+  "what": {
+    "body": "Sophia Forge ist die Betriebsebene, die deinem Studio fehlt. Asset-Management, Aufgabenverfolgung, Echtzeit-Zusammenarbeit und KI-gestützte Workflows — alles verbunden, alles stimmig, alles an einem Ort."
+  },
+  "features": {
+    "asset_sync": "Asset-Synchronisierung",
+    "asset_sync_desc": "UE5 String Tables, Data Tables und Actor Assemblies — live.",
+    "task_tracking": "Aufgabenverfolgung",
+    "task_tracking_desc": "Produktionspipelines, die auf die Arbeitsweise von Game-Teams zugeschnitten sind.",
+    "collaboration": "Echtzeit-Zusammenarbeit",
+    "collaboration_desc": "Dein gesamtes Studio, synchron, ohne Chaos.",
+    "ai_workflows": "KI-Workflows",
+    "ai_workflows_desc": "Intelligente Orchestrierung, die den Verwaltungsaufwand für dich übernimmt.",
+    "ue5": "Unreal Engine 5",
+    "ue5_desc": "Vollständige native Integration. Unsere erste und tiefste Engine-Unterstützung.",
+    "more_engines": "Weitere Engines",
+    "more_engines_desc": "Weitere Engines und individuelle Pipelines sind in Planung."
+  },
+  "quote": {
+    "eyebrow": "Der Standard",
+    "text": "Jede Funktion in Sophia Forge existiert, weil ich sie gebraucht habe. In der Produktion entwickelt. In der Produktion getestet. An euch ausgeliefert.",
+    "author": "Jessyka Gavião",
+    "role": "Gründerin, Sophia Foundry"
+  },
+  "waitlist": {
+    "eyebrow": "Early Access",
+    "headline": "Sei dabei.",
+    "subline": "Sophia Forge startet bald. Melde dich für die Warteliste an und erhalte Early Access, Preisinformationen und Neuigkeiten zum Launch.",
+    "placeholder": "deine@email.de",
+    "cta": "Auf die Warteliste",
+    "disclaimer": "Kein Spam. Jederzeit abmeldbar.",
+    "success": "Du stehst auf der Liste.",
+    "error": "Etwas ist schiefgelaufen. Bitte versuche es erneut."
+  },
+  "footer": {
+    "tagline": "Ein Produkt von Sophia Foundry",
+    "email": "jessyka@sophiafoundry.com",
+    "copyright": "© 2026 Sophia Foundry. Alle Rechte vorbehalten."
+  }
+}

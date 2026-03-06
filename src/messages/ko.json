@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "title": "Sophia Forge",
+    "description": "당신의 스튜디오를 위해 설계된 운영 플랫폼."
+  },
+  "nav": {
+    "language": "언어",
+    "backToFoundry": "Sophia Foundry로 돌아가기"
+  },
+  "hero": {
+    "eyebrow": "스튜디오 플랫폼",
+    "headline": "파이프라인을 구축하세요.",
+    "subline": "당신의 스튜디오를 위해 설계된 운영 플랫폼.",
+    "cta": "얼리 액세스 대기 목록에 참여하기",
+    "scroll": "스크롤"
+  },
+  "what": {
+    "body": "Sophia Forge는 스튜디오에 필요했던 운영 레이어입니다. 에셋 관리, 작업 추적, 실시간 협업, AI 기반 워크플로 — 모두 연결되고, 모두 일관되며, 하나의 공간에서."
+  },
+  "features": {
+    "asset_sync": "에셋 동기화",
+    "asset_sync_desc": "UE5 String Tables, Data Tables, Actor Assemblies — 실시간으로.",
+    "task_tracking": "작업 추적",
+    "task_tracking_desc": "게임 팀이 실제로 일하는 방식에 맞춘 프로덕션 파이프라인.",
+    "collaboration": "실시간 협업",
+    "collaboration_desc": "혼란 없이, 스튜디오 전체가 동기화됩니다.",
+    "ai_workflows": "AI 워크플로",
+    "ai_workflows_desc": "반복 작업을 대신 처리해주는 지능형 오케스트레이션.",
+    "ue5": "Unreal Engine 5",
+    "ue5_desc": "완전한 네이티브 통합. 가장 먼저, 가장 깊이 지원하는 엔진.",
+    "more_engines": "더 많은 엔진",
+    "more_engines_desc": "다른 엔진과 커스텀 파이프라인도 로드맵에 포함되어 있습니다."
+  },
+  "quote": {
+    "eyebrow": "기준",
+    "text": "Sophia Forge의 모든 기능은 제가 직접 필요해서 만든 것입니다. 프로덕션에서 구축하고, 프로덕션에서 검증하고, 여러분께 제공합니다.",
+    "author": "Jessyka Gavião",
+    "role": "설립자, Sophia Foundry"
+  },
+  "waitlist": {
+    "eyebrow": "얼리 액세스",
+    "headline": "가장 먼저 경험하세요.",
+    "subline": "Sophia Forge가 곧 출시됩니다. 대기 목록에 등록하고 얼리 액세스, 가격 안내, 출시 소식을 받아보세요.",
+    "placeholder": "이메일@example.com",
+    "cta": "대기 목록 참여",
+    "disclaimer": "스팸 없음. 언제든 구독 취소 가능.",
+    "success": "등록이 완료되었습니다.",
+    "error": "문제가 발생했습니다. 다시 시도해 주세요."
+  },
+  "footer": {
+    "tagline": "Sophia Foundry 제품",
+    "email": "jessyka@sophiafoundry.com",
+    "copyright": "© 2026 Sophia Foundry. All rights reserved."
+  }
+}

@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Backgrounds */
+  --bg-base: #0a0a0f;
+  --bg-surface: #0f0f17;
+
+  /* Green scale */
+  --green-primary: #12a066;
+  --green-bright: #16c47f;
+  --green-dim: #0d7a4e;
+  --green-ghost: rgba(18, 160, 102, 0.08);
+  --green-border: rgba(18, 160, 102, 0.3);
+
+  /* Text */
+  --text-primary: #f5f5f7;
+  --text-secondary: #a0a0b0;
+  --text-muted: #606070;
+
+  /* Borders */
+  --border-subtle: rgba(255, 255, 255, 0.04);
+  --border-default: rgba(255, 255, 255, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: rgba(18, 160, 102, 0.3);
+  color: var(--text-primary);
+}

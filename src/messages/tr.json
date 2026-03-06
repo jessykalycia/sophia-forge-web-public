@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "title": "Sophia Forge",
+    "description": "Stüdyonuz için tasarlanmış operasyon platformu."
+  },
+  "nav": {
+    "language": "Dil",
+    "backToFoundry": "Sophia Foundry'ye Dön"
+  },
+  "hero": {
+    "eyebrow": "Bir stüdyo platformu",
+    "headline": "Pipeline'ını dök.",
+    "subline": "Stüdyonuz için tasarlanmış operasyon platformu.",
+    "cta": "Erken erişim bekleme listesine katıl",
+    "scroll": "Kaydır"
+  },
+  "what": {
+    "body": "Sophia Forge, stüdyonuzun eksik olan operasyon katmanıdır. Asset yönetimi, görev takibi, gerçek zamanlı iş birliği ve yapay zekâ destekli iş akışları — hepsi bağlı, hepsi tutarlı, hepsi tek bir yerde."
+  },
+  "features": {
+    "asset_sync": "Asset Sync",
+    "asset_sync_desc": "UE5 String Tables, Data Tables ve Actor Assemblies — canlı.",
+    "task_tracking": "Görev takibi",
+    "task_tracking_desc": "Oyun ekiplerinin gerçekte nasıl çalıştığına göre tasarlanmış üretim pipeline'ları.",
+    "collaboration": "Gerçek zamanlı iş birliği",
+    "collaboration_desc": "Tüm stüdyonuz, senkronize, kaos olmadan.",
+    "ai_workflows": "Yapay Zekâ İş Akışları",
+    "ai_workflows_desc": "Rutin işleri sizin yerinize halleden akıllı orkestrasyon.",
+    "ue5": "Unreal Engine 5",
+    "ue5_desc": "Tam yerel entegrasyon. İlk ve en derin motor desteğimiz.",
+    "more_engines": "Daha Fazla Motor",
+    "more_engines_desc": "Diğer motorlar ve özel pipeline'lar yol haritasında."
+  },
+  "quote": {
+    "eyebrow": "Standart",
+    "text": "Sophia Forge'daki her özellik, ona ihtiyacım olduğu için var. Üretimde inşa edildi. Üretimde test edildi. Size teslim edildi.",
+    "author": "Jessyka Gavião",
+    "role": "Kurucu, Sophia Foundry"
+  },
+  "waitlist": {
+    "eyebrow": "Erken erişim",
+    "headline": "İlk sen ol.",
+    "subline": "Sophia Forge yakında yayınlanıyor. Erken erişim, fiyat güncellemeleri ve lansman haberleri için bekleme listesine katılın.",
+    "placeholder": "senin@eposta.com",
+    "cta": "Listeye katıl",
+    "disclaimer": "Spam yok. İstediğin zaman çık.",
+    "success": "Listedesin.",
+    "error": "Bir şeyler ters gitti. Tekrar dene."
+  },
+  "footer": {
+    "tagline": "Bir Sophia Foundry ürünü",
+    "email": "jessyka@sophiafoundry.com",
+    "copyright": "© 2026 Sophia Foundry. Tüm hakları saklıdır."
+  }
+}

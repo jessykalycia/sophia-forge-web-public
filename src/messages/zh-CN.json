@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "title": "Sophia Forge",
+    "description": "专为你的工作室打造的运营平台。"
+  },
+  "nav": {
+    "language": "语言",
+    "backToFoundry": "返回 Sophia Foundry"
+  },
+  "hero": {
+    "eyebrow": "工作室平台",
+    "headline": "锻造你的流水线。",
+    "subline": "专为你的工作室打造的运营平台。",
+    "cta": "加入抢先体验候补名单",
+    "scroll": "滚动"
+  },
+  "what": {
+    "body": "Sophia Forge 是你的工作室一直缺少的运营层。资产管理、任务追踪、实时协作和 AI 驱动的工作流——全部互联、全部一致、尽在一处。"
+  },
+  "features": {
+    "asset_sync": "资产同步",
+    "asset_sync_desc": "UE5 String Tables、Data Tables 和 Actor Assemblies——实时同步。",
+    "task_tracking": "任务追踪",
+    "task_tracking_desc": "为游戏团队实际工作方式量身打造的生产流水线。",
+    "collaboration": "实时协作",
+    "collaboration_desc": "整个工作室同步运转，告别混乱。",
+    "ai_workflows": "AI 工作流",
+    "ai_workflows_desc": "智能编排，为你处理繁杂事务。",
+    "ue5": "Unreal Engine 5",
+    "ue5_desc": "完整的原生集成。我们最早、最深入的引擎支持。",
+    "more_engines": "更多引擎",
+    "more_engines_desc": "其他引擎和自定义管线已在规划中。"
+  },
+  "quote": {
+    "eyebrow": "行业标准",
+    "text": "Sophia Forge 的每一项功能都源于我自己的需求。在生产中构建，在生产中验证，交付于你。",
+    "author": "Jessyka Gavião",
+    "role": "创始人，Sophia Foundry"
+  },
+  "waitlist": {
+    "eyebrow": "抢先体验",
+    "headline": "抢占先机。",
+    "subline": "Sophia Forge 即将上线。加入候补名单，获取抢先体验资格、定价更新和发布动态。",
+    "placeholder": "you@email.com",
+    "cta": "加入候补名单",
+    "disclaimer": "绝无垃圾邮件，随时可退订。",
+    "success": "你已成功加入名单。",
+    "error": "出了点问题，请重试。"
+  },
+  "footer": {
+    "tagline": "Sophia Foundry 旗下产品",
+    "email": "jessyka@sophiafoundry.com",
+    "copyright": "© 2026 Sophia Foundry. 保留所有权利。"
+  }
+}
