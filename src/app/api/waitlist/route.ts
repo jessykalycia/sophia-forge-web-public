@@ -3,6 +3,21 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+async function withRetry<T>(fn: () => Promise<T>): Promise<T> {
+  const delays = [600, 1200, 2400];
+  for (let attempt = 0; attempt <= delays.length; attempt++) {
+    try {
+      return await fn();
+    } catch (error) {
+      if (attempt === delays.length) throw error;
+      await new Promise((r) => setTimeout(r, delays[attempt]));
+    }
+  }
+  throw new Error("Unreachable");
+}
+
+const wait = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
 export async function POST(request: Request) {
   try {
     const { email, locale } = await request.json();
@@ -14,11 +29,16 @@ export async function POST(request: Request) {
       );
     }
 
-    await Promise.all([
+    await withRetry(() =>
       resend.contacts.create({
         email,
         unsubscribed: false,
-      }),
+      })
+    );
+
+    await wait(1000);
+
+    await withRetry(() =>
       resend.emails.send({
         from: "Sophia Forge <noreply@sophiafoundry.com>",
         to: email,
@@ -34,7 +54,12 @@ export async function POST(request: Request) {
             </p>
           </div>
         `,
-      }),
+      })
+    );
+
+    await wait(1000);
+
+    await withRetry(() =>
       resend.emails.send({
         from: "Sophia Forge <noreply@sophiafoundry.com>",
         to: "jessyka@sophiafoundry.com",
@@ -46,8 +71,8 @@ export async function POST(request: Request) {
             <p>Locale: ${locale || "unknown"}</p>
           </div>
         `,
-      }),
-    ]);
+      })
+    );
 
     return NextResponse.json({ success: true, message: "You're on the list." });
   } catch (error) {
