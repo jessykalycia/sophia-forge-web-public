@@ -97,10 +97,10 @@ export async function POST(request: Request) {
     // Check if already on the list
     const existing = await resend.contacts.get({ email });
     if (existing.data) {
-      return NextResponse.json(
-        { success: false, message: "You're already on the list." },
-        { status: 409 }
-      );
+      return NextResponse.json({
+        success: true,
+        message: "You're already on the list.",
+      });
     }
 
     // Return immediately, run the rest in background
