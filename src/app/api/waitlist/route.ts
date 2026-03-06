@@ -18,6 +18,71 @@ async function withRetry<T>(fn: () => Promise<T>): Promise<T> {
 
 const wait = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
+function sanitize(str: string) {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+const emailHtml = () => `
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body style="margin:0;padding:0;background-color:#0a0a0f;">
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#0a0a0f;">
+    <tr>
+      <td align="center" style="padding:32px;">
+        <table width="600" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;width:100%;">
+          <tr>
+            <td style="padding:32px;background-color:#0f1f1a;border-radius:8px;">
+              <h1 style="color:#12a066;font-family:sans-serif;font-size:24px;margin:0 0 16px 0;">Sophia Forge</h1>
+              <p style="color:#a0a0b0;font-family:sans-serif;line-height:1.8;margin:0 0 32px 0;">
+                You're on the list. We'll notify you when Sophia Forge is ready for early access.
+              </p>
+              <p style="color:#606070;font-family:sans-serif;font-size:14px;margin:0;">
+                &mdash; Sophia Foundry
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+`;
+
+const notificationHtml = (email: string, locale: string) => `
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body style="margin:0;padding:0;background-color:#0a0a0f;">
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#0a0a0f;">
+    <tr>
+      <td align="center" style="padding:32px;">
+        <table width="600" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;width:100%;">
+          <tr>
+            <td style="padding:32px;background-color:#0f1f1a;border-radius:8px;">
+              <h1 style="color:#a84de0;font-family:sans-serif;font-size:24px;margin:0 0 16px 0;">New Waitlist Signup</h1>
+              <p style="color:#a0a0b0;font-family:sans-serif;line-height:1.8;margin:0 0 8px 0;">
+                <strong style="color:#f5f5f7;">Email:</strong> ${sanitize(email)}
+              </p>
+              <p style="color:#a0a0b0;font-family:sans-serif;line-height:1.8;margin:0;">
+                <strong style="color:#f5f5f7;">Locale:</strong> ${sanitize(locale || "unknown")}
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+`;
+
 export async function POST(request: Request) {
   try {
     const { email, locale } = await request.json();
@@ -29,52 +94,49 @@ export async function POST(request: Request) {
       );
     }
 
-    await withRetry(() =>
-      resend.contacts.create({
-        email,
-        unsubscribed: false,
-      })
-    );
+    // Check if already on the list
+    const existing = await resend.contacts.get({ email });
+    if (existing.data) {
+      return NextResponse.json(
+        { success: false, message: "You're already on the list." },
+        { status: 409 }
+      );
+    }
 
-    await wait(1000);
+    // Return immediately, run the rest in background
+    const response = NextResponse.json({
+      success: true,
+      message: "You're on the list.",
+    });
 
-    await withRetry(() =>
-      resend.emails.send({
-        from: "Sophia Forge <noreply@sophiafoundry.com>",
-        to: email,
-        subject: "You're on the Sophia Forge waitlist",
-        html: `
-          <div style="font-family: sans-serif; color: #f5f5f7; background: #0a0a0f; padding: 2rem;">
-            <h1 style="color: #12a066; font-size: 1.5rem;">Sophia Forge</h1>
-            <p style="color: #a0a0b0; line-height: 1.8;">
-              You're on the list. We'll notify you when Sophia Forge is ready for early access.
-            </p>
-            <p style="color: #606070; font-size: 0.875rem; margin-top: 2rem;">
-              &mdash; Sophia Foundry
-            </p>
-          </div>
-        `,
-      })
-    );
+    (async () => {
+      await withRetry(() =>
+        resend.emails.send({
+          from: "Sophia Forge <noreply@sophiafoundry.com>",
+          to: email,
+          subject: "You're on the Sophia Forge waitlist",
+          html: emailHtml(),
+        })
+      );
+      await wait(1000);
+      await withRetry(() =>
+        resend.emails.send({
+          from: "Sophia Forge <noreply@sophiafoundry.com>",
+          to: "jessyka@sophiafoundry.com",
+          subject: `New Sophia Forge waitlist signup: ${email}`,
+          html: notificationHtml(email, locale),
+        })
+      );
+      await wait(1000);
+      await withRetry(() =>
+        resend.contacts.create({
+          email,
+          unsubscribed: false,
+        })
+      );
+    })().catch((err) => console.error("Background waitlist error:", err));
 
-    await wait(1000);
-
-    await withRetry(() =>
-      resend.emails.send({
-        from: "Sophia Forge <noreply@sophiafoundry.com>",
-        to: "jessyka@sophiafoundry.com",
-        subject: `New Sophia Forge waitlist signup: ${email}`,
-        html: `
-          <div style="font-family: sans-serif;">
-            <p><strong>New waitlist signup</strong></p>
-            <p>Email: ${email}</p>
-            <p>Locale: ${locale || "unknown"}</p>
-          </div>
-        `,
-      })
-    );
-
-    return NextResponse.json({ success: true, message: "You're on the list." });
+    return response;
   } catch (error) {
     console.error("Waitlist error:", error);
     return NextResponse.json(
